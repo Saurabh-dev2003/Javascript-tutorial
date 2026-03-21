@@ -109,4 +109,48 @@ console.log(rps("rock" , "rock"));  // output: draw
 console.log(rps("rock" , "paper"));  // output: computer
 
 
+function sumArray(arr){
+    let sum = 0;
+    for(let i=0; i<arr.length; i++){
+        sum = sum+arr[i];
+        
+    }
+    return sum;
+}
+console.log(sumArray([1,2,3]));
+
+
+function greet(name) {
+  let Message = `Hello, ${name}!`;
+  return Message;
+}
+console.log(greet("Alice"));
+
+function countVowels(str){
+    let count = 0;
+    let vowel = ['a','e','i','o','u'];
+    for(let i=0; i<str.length; i++){
+        for(let j=0; j<vowel.length; j++){
+            if(str[i]=== vowel[j]){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+console.log(countVowels("Hello"));
+
+function getFullName({firstName,lastName}) {
+    return `${firstName} ${lastName}`;
+}
+
+console.log(getFullName({firstName:"Jone",lastName:"Doe"}));
+
+function fizzBuzz(n){
+    if(n%3 == 0 && n%5 == 0) return "FizzBuzz";
+    if(n%3 == 0) return "Fizz";
+    if(n%5 == 0) return "Buzz";
+    return n.toString();
+}
+console.log(fizzBuzz(7));
 
